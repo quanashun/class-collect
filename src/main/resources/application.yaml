@@ -1,0 +1,27 @@
+version: 1.0.0
+
+server:
+  port: 8080
+  servlet:
+    context-path: /class-collect/api
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  redis:
+    serializer: org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer
+  profiles:
+    active: prod
+
+swagger:
+  enabled: true
+
+#token过期时间（单位：小时）
+tokenTimeOut: 120
+
+
+#是否开启图像验证码（默认：关闭）
+isOpenCaptcha: false
+#图像验证码过期时间（单位：分钟）
+captchaTimeout: 5

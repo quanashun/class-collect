@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/class_schedule?serverTimezone=Asia/Shanghai # 主
+    username: root
+    password: root
+  redis:
+    host: redis.host
+    password: redisPassword
+
+websiteHost:
+    http://localhost:8080
